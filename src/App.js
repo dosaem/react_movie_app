@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import "./App.css";
 import Movie from "./Movie";
 
@@ -24,14 +24,29 @@ const movies = [
       "http://moonhak.co.kr/home/wp-content/uploads/bookcover/%EC%8A%A4%ED%83%80%EC%9B%8C%EC%A6%88-%EC%94%A8%EB%84%A4%EC%95%84%ED%8A%B84_%ED%91%9C1_web.jpg"
   }
 ];
-function App() {
-  return (
-    <div className="App">
-      {movies.map((movie, index) => {
-        return <Movie title={movie.title} poster={movie.poster} key={index} />;
-      })}
-    </div>
-  );
+class App extends Component {
+  state = {
+    greeting: "hello"
+  };
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({
+        greeting: "hello again"
+      });
+    }, 2000);
+  }
+  render() {
+    return (
+      <div className="App">
+        {this.state.greeting}
+        {movies.map((movie, index) => {
+          return (
+            <Movie title={movie.title} poster={movie.poster} key={index} />
+          );
+        })}
+      </div>
+    );
+  }
 }
 
 export default App;
