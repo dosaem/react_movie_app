@@ -32,7 +32,7 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "http://dosaem.github.io/exercise/movie_app",
+  "homepage": "http://dosaem.github.io/movie_app",
   "devDependencies": {
     "gh-pages": "^2.1.0"
   }
