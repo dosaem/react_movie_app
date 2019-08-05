@@ -32,8 +32,8 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "http://dosaem.github.io/movie_app",
+  "homepage": "http://dosaem.github.io/react_movie_app",
   "devDependencies": {
-    "gh-pages": "^2.1.0"
+    "gh-pages": "2.0.1"
   }
 }
